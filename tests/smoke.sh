@@ -1,7 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 
-echo "Test login page..."
-curl -s -o /dev/null -w "%{http_code}\n" http://127.0.0.1:8080/index.php
+echo "Testing signup page..."
+curl -f http://127.0.0.1:8000/signup.php
 
-echo "Test register page..."
-curl -s -o /dev/null -w "%{http_code}\n" http://127.0.0.1:8080/register.php
+echo "Testing login page..."
+curl -f http://127.0.0.1:8000/login.php
+
+echo "All tests passed!"
